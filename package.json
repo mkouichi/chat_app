@@ -9,7 +9,9 @@
   "author": "kouichi",
   "license": "ISC",
   "dependencies": {
+    "ejs": "^3.0.1",
     "express": "^4.17.1",
+    "mongoose": "^5.8.1",
     "socket.io": "^2.3.0"
   },
   "devDependencies": {
