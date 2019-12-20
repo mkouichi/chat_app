@@ -7,7 +7,7 @@ const db = require("./config/keys").mongoURI,
 
 // App setup
 const app = express(),
-    server = app.listen(5000, function() {
+    server = app.listen(process.env.PORT || 5000, function() {
         console.log("Server started on port 5000!");
     });
 
