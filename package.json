@@ -1,20 +1,23 @@
 {
-  "name": "chat_app_node_socket",
-  "version": "1.0.0",
-  "description": "Chat app with Node.js and Socket.io",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "kouichi",
-  "license": "ISC",
-  "dependencies": {
-    "ejs": "^3.0.1",
-    "express": "^4.17.1",
-    "mongoose": "^5.8.1",
-    "socket.io": "^2.3.0"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.2"
-  }
+    "name": "chat_app_node_socket",
+    "version": "1.0.0",
+    "description": "Chat app with Node.js and Socket.io",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "kouichi",
+    "license": "ISC",
+    "engines": {
+        "node": "10.16.0"
+    },
+    "dependencies": {
+        "ejs": "^3.0.1",
+        "express": "^4.17.1",
+        "mongoose": "^5.8.1",
+        "socket.io": "^2.3.0"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.2"
+    }
 }
