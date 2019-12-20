@@ -1,5 +1,8 @@
 const express = require("express"),
-    socket = require("socket.io"),
+    socket = require("socket.io");
+
+// DB Config
+const db = require("./config/keys").mongoURI,
     mongoose = require("mongoose");
 
 // App setup
@@ -13,18 +16,15 @@ app.set("view engine", "ejs");
 // Static files
 app.use(express.static("public"));
 
-// DB Config
-const db = require("./config/keys").mongoURI;
-
 // Schema setup
 let chatSchema = new mongoose.Schema({
     name: {
         type: String,
-        required: true
+        required: [true, "Name should be given!"]
     },
     message: {
         type: String,
-        required: true
+        required: [true, "No message?"]
     }
 });
 

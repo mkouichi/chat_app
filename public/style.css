@@ -2,3 +2,8 @@
     margin: 0;
     padding: 0;
 }
+
+#chat-window {
+    margin-top: 70px;
+    margin-bottom: 200px;
+}

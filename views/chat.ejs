@@ -11,38 +11,37 @@
     <!-- Socket.io CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
 
-    <title>Chat App</title>
+    <title>MongoChat</title>
 </head>
 
 <body>
-    <nav class="navbar navbar-dark bg-primary justify-content-center">
+    <nav class="navbar fixed-top navbar-dark bg-primary justify-content-center">
         <a class="navbar-brand mx-auto" href="#">MongoChat</a>
     </nav>
 
     <div class="container">
         <div id="mongo-chat">
-            <div id="chat-window" class="my-4">
+            <div id="chat-window">
                 <div id="output">
                     <% chats.forEach(chat =>{ %>
-                    <p><strong><%= chat.name %>: </strong> <%= chat.message %> </p cl>
+                    <p><strong><%= chat.name %>: </strong> <%= chat.message %> </p>
                     <% }) %>
                 </div>
                 <div id="feedback"></div>
             </div>
 
+            <div class="container fixed-bottom bg-white">
+                <form id="msgForm">
+                    <div class="row form-group">
+                        <input type="text" id="handle" class="col-12 form-control mx-auto" placeholder="Name">
 
-            <form id="msgForm">
-                <div class="row form-group mb-1">
-                    <input type="text" id="handle" class="col-12 col-sm-6 form-control" placeholder="Name">
-                </div>
+                        <textarea class="col-12 form-control mx-auto" id="message" rows="3" autocomplete="off"
+                            placeholder="Message"></textarea>
 
-                <div class="row form-group">
-                    <textarea class="col-12 col-sm-10 form-control" id="message" rows="3" autocomplete="off"
-                        placeholder="Message"></textarea>
-
-                    <button id="sendBtn" class="col-12 col-sm-2 btn btn-primary">Send</button>
-                </div>
-            </form>
+                        <button id="sendBtn" class="col-12 btn btn-primary mx-auto text-uppercase">Send</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 
