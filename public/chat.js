@@ -1,4 +1,4 @@
-const socket = io.connect("http://localhost:5000");
+const socket = io.connect("https://mongochat-57481.herokuapp.com");
 
 // Query DOM
 const chatWindow = document.getElementById("chat-window"),

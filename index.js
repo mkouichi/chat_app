@@ -3,7 +3,6 @@ const express = require("express"),
 
 // DB Config
 const db = process.env.mongoURL,
-    // const db = `mongodb+srv://${process.env.username}:${process.env.password}.@chat-app-node-socket-0gxnd.mongodb.net/test?retryWrites=true&w=majority`,
     // const db = require("./config/keys").mongoURI,
     mongoose = require("mongoose");
 
@@ -19,7 +18,7 @@ const app = express(),
 
 // const app = express(),
 //     server = app.listen(5000, function() {
-//         console.log("Server has started!");
+//         console.log("Server has started on port 5000!");
 //     });
 
 app.set("view engine", "ejs");
