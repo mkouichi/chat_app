@@ -9,7 +9,7 @@
     "author": "kouichi",
     "license": "ISC",
     "engines": {
-        "node": "10.16.0"
+        "node": "12.14.0"
     },
     "dependencies": {
         "ejs": "^3.0.1",
