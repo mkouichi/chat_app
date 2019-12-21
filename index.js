@@ -9,9 +9,9 @@ const db = process.env.mongoURL,
 
 // App setup
 let port = process.env.PORT;
-if (port == null || port == "") {
-    port = 5000;
-}
+// if (port == null || port == "") {
+//     port = 5000;
+// }
 const app = express(),
     server = app.listen(port, function() {
         console.log("Server has started!");
