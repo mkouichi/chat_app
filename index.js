@@ -2,14 +2,24 @@ const express = require("express"),
     socket = require("socket.io");
 
 // DB Config
-const db = require(`mongodb+srv://${process.env.username}:${process.env.password}.@chat-app-node-socket-0gxnd.mongodb.net/test?retryWrites=true&w=majority`),
+// const db = require(`mongodb+srv://${process.env.username}:${process.env.password}.@chat-app-node-socket-0gxnd.mongodb.net/test?retryWrites=true&w=majority`),
+const db = require("./config/keys").mongoURI,
     mongoose = require("mongoose");
 
 // App setup
+let port = process.env.PORT;
+if (port == null || port == "") {
+    port = 5000;
+}
 const app = express(),
-    server = app.listen(process.env.PORT || 5000, function() {
+    server = app.listen(port, function() {
         console.log("Server has started!");
     });
+
+// const app = express(),
+//     server = app.listen(5000, function() {
+//         console.log("Server has started!");
+//     });
 
 app.set("view engine", "ejs");
 
