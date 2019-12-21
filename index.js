@@ -1,25 +1,25 @@
-const express = require("express"),
-    socket = require("socket.io");
+const express = require("express");
+const socket = require("socket.io");
 
 // DB Config
-const db = process.env.mongoURL,
-    // const db = require("./config/keys").mongoURI,
-    mongoose = require("mongoose");
+const db = process.env.mongoURL;
+const mongoose = require("mongoose");
+
+// For local enviroenment
+// const db = require("./config/keys").mongoURI;
 
 // App setup
 let port = process.env.PORT;
-// if (port == null || port == "") {
-//     port = 5000;
-// }
-const app = express(),
-    server = app.listen(port, function() {
-        console.log("Server has started!");
-    });
 
-// const app = express(),
-//     server = app.listen(5000, function() {
-//         console.log("Server has started on port 5000!");
-//     });
+const app = express();
+const server = app.listen(port, function() {
+    console.log("Server has started!");
+});
+
+// For local enviroenment
+// const server = app.listen(5000, function() {
+//     console.log("Server has started on port 5000!");
+// });
 
 app.set("view engine", "ejs");
 

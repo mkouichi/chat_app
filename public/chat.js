@@ -38,6 +38,9 @@ message.addEventListener("keypress", e => {
 
     if (e.which == 13 && !e.shiftKey) {
         submit(e);
+
+        // Clear input
+        message.value = "";
     }
 });
 
@@ -54,9 +57,6 @@ socket.on("chat", data => {
         scroll();
         console.log("Scroll fired for a new message!");
     }
-
-    // Clear input
-    message.value = "";
 });
 
 // Display typing message
