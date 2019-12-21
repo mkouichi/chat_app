@@ -2,7 +2,8 @@ const express = require("express"),
     socket = require("socket.io");
 
 // DB Config
-const db = `mongodb+srv://${process.env.username}:${process.env.password}.@chat-app-node-socket-0gxnd.mongodb.net/test?retryWrites=true&w=majority`,
+const db = process.env.mongoURL,
+    // const db = `mongodb+srv://${process.env.username}:${process.env.password}.@chat-app-node-socket-0gxnd.mongodb.net/test?retryWrites=true&w=majority`,
     // const db = require("./config/keys").mongoURI,
     mongoose = require("mongoose");
 
